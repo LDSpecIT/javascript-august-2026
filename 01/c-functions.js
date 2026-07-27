@@ -62,4 +62,3 @@ function hours(open, close) {
 }
 
 
-//RETURN 

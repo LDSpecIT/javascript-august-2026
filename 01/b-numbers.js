@@ -46,10 +46,15 @@ Math.abs() // absolute (no negative -- quantitative response)
 Math.ceil()  //round up
 
 
+// '!==' --> means difference
+// == equal
+// === strickly equal --> may indicate spelling, 
+// && means 'and' 
+// || means 'or'
+
+
+
 //Parsing - convertion between one type to another
-
-
-
 
 
 
