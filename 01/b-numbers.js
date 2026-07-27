@@ -8,6 +8,49 @@
 // Operators
 // const operator = [+, -, >=, <=, /, *, %, >, <, ==]
 
+const myString = "I am some text";
+
+const myNumber = 15;
+
+// Booleans
+// true or false
+
+const darkMode = true;
+
+const pageLoaded = false;
+
+
+// Integer
+
+const classicInteger = 1; 
+
+// classic Float
+
+const classicFloat = 3.1415;
+
+// Math & Numbers
+
+const add = classicInteger + classicFloat;
+const subtraction = classicInteger - classicFloat;
+const multiply = classicInteger * classicFloat;
+const divide = classicInteger / classicFloat;
+const modulor = classicFloat % classicInteger;
+
+
+// Math operators
+
+Math.round() // default closest number
+Math.floor() // round down 
+Math.random() // random selection
+Math.abs() // absolute (no negative -- quantitative response)
+Math.ceil()  //round up
+
+
+//Parsing - convertion between one type to another
+
+
+
+
 
 
 
