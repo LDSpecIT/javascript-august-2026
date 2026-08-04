@@ -96,8 +96,8 @@
 
             console.log( splitWord )
 
-         }
-        
+        }
+
 
 
         return splitWord.join(" ")
