@@ -28,7 +28,7 @@ let defeats = 0
 
 
 
-
+ 
 function guessedALetter(letter){
     const isCorrectGuess = wordToGuess.includes(letter)
     if ( isCorrectGuess ) {
