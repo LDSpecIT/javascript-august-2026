@@ -17,10 +17,15 @@ console.log("Welcome to Hangman")
 // FUNCTION : LOSING FUNCTION
 
 const guessesBeforeLoss = 6
-const listOfWords = ['apple']
+const listOfWords = ['apple', 'apply']
 let guessedLetters = []
 let guessesRemaining = 0
 let wordToGuess
+
+let victories = 0
+let defeats = 0 
+
+
 
 
 
@@ -36,8 +41,9 @@ function guessedALetter(letter){
 function correctGuess(correctLetter) {
     guessedLetters.push(correctLetter)
     const isVictory = testForVictory()
+    console.log( displayWordSpaces() )
     if (isVictory) {
-        console.log("VICTORY")
+        victory()
     } else {
         console.log(`${correctLetter} is in the word` )
     }
@@ -48,10 +54,10 @@ function incorrectGuess(incorrectLetter) {
     console.log(incorrectLetter)
     guessedLetters.push(incorrectLetter)
     guessesRemaining--
-
+    console.log( displayWordSpaces() )
     const isDefeated =  guessesRemaining <= 0
         if(isDefeated) {
-            console.log("You lose!")
+            defeat()
         } else {
             console.log(`${incorrectLetter} is NOT in the word, you have ${guessesRemaining} guesses remaining`)
         }
@@ -64,7 +70,7 @@ function testForVictory(){
     for (let i = 0; i < wordToGuess.length; i++){
         const wordLetter = wordToGuess[i]
         const included = guessedLetters.includes(wordLetter)
-        console.log(wordLetter, included)
+        
         if(!included){
             return false
     } 
@@ -72,6 +78,27 @@ function testForVictory(){
 }
         return true
 }
+
+
+
+function displayWordSpaces() {
+
+    let lettersArray = wordToGuess.split('')
+
+    for (let i = 0; i < lettersArray.length; i++){
+        const letter = lettersArray[i]
+        const isLetterInGuessedLetters = guessedLetters.includes (letter)
+        if (!isLetterInGuessedLetters) {
+            lettersArray[i] = "_"
+
+        }
+
+    }
+
+        return lettersArray.join(" ")
+
+}
+
 
 
 
@@ -87,7 +114,32 @@ function setRandomWord() {
 
 }
 
+function reset() {
+    initialize()
+}
 
+
+function defeat(){
+    console.log("You Lost!")
+    defeats++
+    console.log(`The word was ${wordToGuess}`)
+    console.log(`You have won ${victories} and lost ${defeats}`)
+    console.log("A new word has been chosen if you would like to play again!")
+    reset()
+}
+
+
+//FUNCTION : WINNING FUNCTION
+
+function victory() {
+    
+    console.log("VICTORY!")
+    victories++
+    console.log(`The word was ${wordToGuess}`)
+    console.log(`You have won ${victories} and lost ${defeats}`)
+    console.log("A new word has been chosen if you would like to play again!")
+    reset()
+}
 
 
 // SETUP THE GAME
@@ -99,8 +151,10 @@ function initialize() {
     guessedLetters = []
     //set the random word
     setRandomWord()
+    //display word spaces
+    console.log( displayWordSpaces() )
     //Show Instructions
-    console.log("TODO: INSTRUCTIONS GO HERE")
+    console.log("Use guessALeter('letter') to guess which letters are in the word")
 }
 
 
