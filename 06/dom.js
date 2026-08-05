@@ -49,7 +49,7 @@ allP.textContent = "New P"
 
 jimothy.src = "newsrc"
 
-//7
+//7 
 
 jimothy.style.border = "solid 1px black"
 
