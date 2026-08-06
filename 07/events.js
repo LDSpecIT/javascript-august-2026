@@ -108,7 +108,7 @@ function handleSubmitTodo (event) {
     newLi.textContent = `${priority} - ${userTodo}`
 
     secondTodoList.prepend( newLi )
-    
+      
     // console.log(newLi.textContent)
 
     secondTodoForm.reset()
