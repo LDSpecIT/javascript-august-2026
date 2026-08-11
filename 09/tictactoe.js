@@ -2,7 +2,7 @@
 let axePlayer = "X"
 
 
-fn checkvi (){
+function checkVictory (){
     if (sqaure === "clicked"){
         
     }    
