@@ -1,0 +1,49 @@
+// ANIMALS ARRAY EXERCISES //
+
+const animals = [
+    "ant","ape","bat","bee","cat","cod","dog","eel","elk","emu","fly","fox","gnu","jay","owl","pig","ram","rat","yak","bear","boar","clam","crab","crow","deer","dove","duck","fish","frog","gaur","gnat","goat","gull","hare","hawk","ibex","ibis","kudu","lark","lion","mink","mole","mule","newt","oryx","pony","rail","rook","seal","swan","toad","wasp","wolf","worm","wren","bison","camel","cobra","crane","eagle","eland","finch","goose","heron","horse","human","hyena","koala","lemur","llama","loris","louse","moose","mouse","okapi","otter","quail","raven","shark","sheep","shrew","skunk","snail","snake","squid","stork","tapir","tiger","trout","viper","whale","zebra","alpaca","donkey","baboon","badger","beaver","cattle","chough","coyote","curlew","dugong","dunlin","falcon","ferret","gerbil","grouse","hornet","jackal","jaguar","locust","magpie","mantis","marten","monkey","oyster","parrot","pigeon","quelea","rabbit","salmon","spider","turkey","turtle","walrus","weasel","wombat","buffalo","caribou","chamois","cheetah","chicken","dogfish","dolphin","echidna","gazelle","giraffe","gorilla","goshawk","guanaco","hamster","herring","kouprey","lapwing","leopard","lobster","mallard","manatee","meerkat","narwhal","octopus","opossum","ostrich","panther","peafowl","pelican","penguin","quetzal","raccoon","sardine","sparrow","swallow","tarsier","termite","vulture","wallaby","wildcat","aardvark","anteater","antelope","capybara","dinosaur","dotterel","elephant","flamingo","goldfish","hedgehog","kangaroo","lyrebird","mandrill","mongoose","mosquito","pheasant","porpoise","red deer","reindeer","scorpion","seahorse","squirrel","starling","stingray","stinkbug","woodcock","albatross","alligator","armadillo","barracuda","butterfly","cassowary","cockroach","cormorant","crocodile","dragonfly","goldfinch","jellyfish","kookabura","partridge","porcupine","red panda","sandpiper","spoonbill","wolverine","chimpanzee","chinchilla","kingfisher","rhinoceros","salamander","woodpecker","caterpillar","grasshopper","hummingbird","nightingale","sand dollar","hippopotamus"
+]
+
+// Use .forEach() to console.log each name
+
+                animals.forEach( (fullList) => console.log(fullList))
+
+// Use .map() to return a new array of each name capitalized
+                //const capitalArray = []
+                const capitalAnimals = animals.map(species => species.toUpperCase())
+                //capitalArray.push(capitalAnimals)
+
+                // animals.map(() => console.log (animals[0].toUpperCase))
+
+// Use .sort() to alphabetically sort each name
+
+                console.log(animals.sort((a, b) => a > b ))
+
+// Use .find() to find the first animal with a name of 3 characters
+
+                const topThreeLetter = animals.find(shortName => shortName.length === 3)
+                console.log(topThreeLetter)
+                
+                
+                // animals.find(() => (animals.length === 3)) | {if (shortName.length === 3) {console.log (shortName)}})
+
+// Use .filter() to create a new array of animals with a name less than 6 characters
+
+                const lessThanSix = animals.filter(species => species.length < 6)
+                console.log(lessThanSix)
+
+                 //animals.filter((sixLetter) => console.log(sixLetter.length === 6))
+
+// Use .filter() to create a new array of animals with a name more than 5 characters
+
+                const fiveAnimals = []
+                const fiveLetters = animals.filter(species => species.length === 6)
+                fiveAnimals.push(fiveLetters)
+                console.log (fiveAnimals)
+
+
+// Use .filter() to create a new array of animals that start with the letter "A"
+                
+                const letterAfilter = []
+                const firstLetter = animals.filter(alphaAnimal => alphaAnimal[0] === "a" )
+                letterAfilter.push(firstLetter)
