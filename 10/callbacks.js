@@ -34,7 +34,7 @@ function doForEach (array, callback){
         const item = array[i]
         callback(item)        
     }
-}
+}   
 
 const upperCasedStates = []
 
