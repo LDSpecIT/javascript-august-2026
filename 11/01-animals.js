@@ -9,12 +9,9 @@ const animals = [
                 animals.forEach( (fullList) => console.log(fullList))
 
 // Use .map() to return a new array of each name capitalized
-                //const capitalArray = []
+         
                 const capitalAnimals = animals.map(species => species[0].toUpperCase() + species.slice(1))
-                //capitalArray.push(capitalAnimals)
-
-                // animals.map(() => console.log (animals[0].toUpperCase))
-
+                
 // Use .sort() to alphabetically sort each name
 
                 console.log(animals.sort((a, b) => a > b ))
@@ -33,7 +30,6 @@ const animals = [
                 const lessThanSix = animals.filter(species => species.length < 6)
                 console.log(lessThanSix)
 
-                 //animals.filter((sixLetter) => console.log(sixLetter.length === 6))
 
 // Use .filter() to create a new array of animals with a name more than 5 characters
 
