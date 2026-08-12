@@ -10,7 +10,7 @@ const animals = [
 
 // Use .map() to return a new array of each name capitalized
                 //const capitalArray = []
-                const capitalAnimals = animals.map(species => species.toUpperCase())
+                const capitalAnimals = animals.map(species => species[0].toUpperCase() + species.slice(1))
                 //capitalArray.push(capitalAnimals)
 
                 // animals.map(() => console.log (animals[0].toUpperCase))
@@ -25,7 +25,8 @@ const animals = [
                 console.log(topThreeLetter)
                 
                 
-                // animals.find(() => (animals.length === 3)) | {if (shortName.length === 3) {console.log (shortName)}})
+                animals.find(() => (animals.length === 3))
+                
 
 // Use .filter() to create a new array of animals with a name less than 6 characters
 
