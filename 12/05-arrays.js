@@ -3,6 +3,7 @@
 // 1. Create a new array named `sodasArray` - make sure there are at least 2 sodas in the array.
 
 
+
 // 2. Use the function `printBigSodas()` to console.log each soda.toUpperCase.
 
 function printBigSodas() {
