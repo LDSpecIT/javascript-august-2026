@@ -6,14 +6,41 @@ const animals = [
 
 // Use .forEach() to console.log each name
 
-// Use .map() to return a new array of each name capitalized
+                animals.forEach( (fullList) => console.log(fullList))
 
+// Use .map() to return a new array of each name capitalized
+         
+                const capitalAnimals = animals.map(species => species[0].toUpperCase() + species.slice(1))
+                
 // Use .sort() to alphabetically sort each name
+
+                console.log(animals.sort((a, b) => a > b ))
 
 // Use .find() to find the first animal with a name of 3 characters
 
+                const topThreeLetter = animals.find(shortName => shortName.length === 3)
+                console.log(topThreeLetter)
+                
+                
+                animals.find(() => (animals.length === 3))
+                
+
 // Use .filter() to create a new array of animals with a name less than 6 characters
+
+                const lessThanSix = animals.filter(species => species.length < 6)
+                console.log(lessThanSix)
+
 
 // Use .filter() to create a new array of animals with a name more than 5 characters
 
+                const fiveAnimals = []
+                const fiveLetters = animals.filter(species => species.length === 6)
+                fiveAnimals.push(fiveLetters)
+                console.log (fiveAnimals)
+
+
 // Use .filter() to create a new array of animals that start with the letter "A"
+                
+                const letterAfilter = []
+                const firstLetter = animals.filter(alphaAnimal => alphaAnimal[0] === "a" )
+                letterAfilter.push(firstLetter)
