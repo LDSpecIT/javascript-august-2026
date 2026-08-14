@@ -2,26 +2,33 @@
 
 // 1. Create a new array named `sodasArray` - make sure there are at least 2 sodas in the array.
 
-
+sodasArray = [
+	"Dr. Pepper",
+	"Coca Cola",
+	"Pepsi",
+	"Sprite",
+	"Fanta",
+]
 
 // 2. Use the function `printBigSodas()` to console.log each soda.toUpperCase.
 
 function printBigSodas() {
-
+	// console.log (sodasArray.toUpperCase())
+	sodasArray.forEach(soda=> console.log ( soda.toUpperCase()))
 }
 
 
 // 3. Use the function `printSodaFizz()` to iterate through the sodas and print out "{soda} is super fizzy" using a `.forEach()`.
 
 function printSodaFizz() {
-    
+    sodasArray.forEach(soda => console.log(`${soda}) is super fizzy`))
 }
 
 
 // 4. Use the function `allColas()` and the `.filter()` method to return all sodas with the word "cola" inside of them.
 
 function allColas() {
-
+	return sodasArray.filter(soda => soda.toLowerCase().includes("cola"))
 }
 
 
@@ -39,36 +46,48 @@ const clientsArray = [
 // 1. Complete the function `printAllNames` which uses a `.forEach()` to console.log each of the client names.
 
 function printAllNames() {
-
+	clientsArray.forEach(client => console.log(client))
 }
 
 
 // 2. Complete the function `filterJohns()` which uses `.filter()` to return an array of all `clients` with the name "john".
 
 function filterJohns() {
-
+	clientsArray.filter(client => client.toLowerCase().includes("John"))
 }
 
 
 // 3. Complete the function `findJane()` which uses `.find()` to return the first person with a name of "Jane" in `clients`.
 
 function findJane() {
-
+	return clientsArray.find(client => client.toLowerCase().includes("jane"))
 }
 
 
 // 4. Complete the function `secondHalf()` which uses `.slice()` to return a new array of only the second half of `clients`.
 
 function secondHalf() {
-
+	const halfwayIndex = Math.ceil(clientsArray.length / 2)
+	return clientsArray.slice(halfwayIndex)
 }
 
 
 // 5. Complete the function `capitalizedNames()` which returns a new array using `.map()` based on the `clients` array with every first name properly capitalized.
 // BONUS - Both the first and last names are properly capitalized when `capitalizedNames()` is called.
 
-function capitalizedNames() {
+function capitalize(string) {
+	return string[0].toUpperCase() + string.slice(1)
+}
 
+
+function capitalizedNames() {
+	
+	return clientsArray.map( client => {
+		return client
+		.split(" ")
+		.map(str => capitalize(str) )
+		.join(" ")	
+})
 }
 
 
@@ -77,5 +96,7 @@ function capitalizedNames() {
 // HINT - You'll have to look up how to create a copy of an array.
 
 function sortNames() {
-
+	const copy = [...clientsArray]
+	return copy.sort( (clientA, clientB ) => clientA > clientB )
 }
+
